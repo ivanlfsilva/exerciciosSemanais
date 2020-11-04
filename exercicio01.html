@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 01</title>
+        <link rel="stylesheet" href="exercicio01.css">
+    </head>
+    <body>
+        <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
+
+        <h1>Exercício</h1>
+
+        <h2>Atividade 01</h2>
+
+        valor01: <input type="number" id="meuX" value="">
+        valor02: <input type="number" id="meuY" value="">
+        <button onclick="minhaFuncao()">Somar</button>
+        <p id="minhaResposta"></p>
+        <script>
+        function minhaFuncao() {
+          var x = Number(document.getElementById("meuX").value);
+          var y = Number(document.getElementById("meuY").value);
+          var soma = x + y;
+          document.getElementById("minhaResposta").innerHTML = soma;
+        }
+        
+        
+        </script>
+    </body>
 </html>
