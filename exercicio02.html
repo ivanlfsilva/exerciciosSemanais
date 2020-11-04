@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>ExercícioSemana1</title>
+    <style>
+        html{
+
+            background-color: rgb(11, 219, 219);
+        }
+    </style>
 </head>
 <body>
+    <h1>Média aritmética</h1>
+    nota 1 : <input type="number" id="nota1">
+    nota 2 : <input type="number" id="nota2">
+    <button onclick="calculaMedia()">Calcular</button>
+    <p id="resultado"></p>
+    
+    
     <script>
+        function calculaMedia(){
+            var nota1 = Number(document.getElementById("nota1").value);
+            var nota2 = Number(document.getElementById("nota2").value);
+            var mediaAritmetica = (nota1 + nota2) / 2
+            document.getElementById("resultado").innerHTML = mediaAritmetica
         
-        document.write("olá munddddddddddddo!")
-        alert("eu sou")
-
+        }
     </script>
 </body>
 </html>
