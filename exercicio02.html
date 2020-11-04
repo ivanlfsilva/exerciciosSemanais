@@ -7,15 +7,25 @@
         html{
 
             background-color: rgb(11, 219, 219);
+            
         }
+        #botão{
+
+            border-radius: 10%;
+            color:rgb(245, 230, 16);
+            border-color: rgba(22, 22, 206, 0);
+            
+
+}
     </style>
 </head>
 <body>
     <h1>Média aritmética</h1>
     nota 1 : <input type="number" id="nota1">
     nota 2 : <input type="number" id="nota2">
-    <button onclick="calculaMedia()">Calcular</button>
+    <button id="botão" onclick="calculaMedia(); document.getElementById('mostra'). style.display='block'">Calcular</button>
     <p id="resultado"></p>
+    <p id="mostra" style="display:none;">média aritmética</p>    
     
     
     <script>
