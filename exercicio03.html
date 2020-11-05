@@ -2,28 +2,23 @@
     <head>
         <meta charset="UTF-8" />
         <title>Programação Estruturada - Aula 01</title>
-        <link rel="stylesheet" href="atividade_01.css">
+        <style>
+            body{
+                text-align: center;
+                background-color: lightgreen;
+            }
+        </style>
     </head>
     <body>
         <noscript>Seu navegador não suporta JavaScript ou ele está desabilitado.</noscript>
 
-        <h1>Exercício</h1>
-
-        <h2>Atividade 01</h2>
-
-        x: <input type="number" id="meuX" value="">
-        y: <input type="number" id="meuY" value="">
-        <button onclick="minhaFuncao()">Clique Aqui</button>
-        <p id="minhaResposta"></p>
+        <h1>Exercício 03</h1>
+        <hr>
+        <h2>Variável Nome</h2>
         <script>
-        function minhaFuncao() {
-          var x = Number(document.getElementById("meuX").value);
-          var y = Number(document.getElementById("meuY").value);
-          var soma = x + y;
-          document.getElementById("minhaResposta").innerHTML = soma;
-        }
-        
-        
+            var nome = prompt("Digite Seu Nome")
+            document.write("Olá " + nome + " , seja bem vindo(a) ao mundo da programação estruturada")
+
         </script>
     </body>
 </html>
