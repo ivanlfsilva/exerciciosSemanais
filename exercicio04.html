@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecercício 04</title>
+    <style>
+        #alert{
+            background-color: aquamarine;
+
+        }
+        body{
+            background-color: rgba(47, 197, 47, 0.507);
+            text-align: justify;
+
+        }
+    </style>
+    nota01 :<input type="number" id="nota01">
+    nota02 :<input type="number" id="nota02">
+    <button onclick="calculaMedia()">calcular</button>
+</head>
+<body>
+    <script>
+        
+       
+        function calculaMedia(){
+            var pesoNota1 = 2;
+            var pesoNota2 = 3;
+            var nota1 = Number(document.getElementById("nota01").value);
+            var nota2 = Number(document.getElementById("nota02").value); 
+            var mediaPonderada = ((nota1 * pesoNota1) + (nota2 * pesoNota2)) / (pesoNota1 + pesoNota2)
+            alert("Sua Média Ponderada È: " + mediaPonderada)
+            
+        }
+
+    </script>
+</body>
+</html>
