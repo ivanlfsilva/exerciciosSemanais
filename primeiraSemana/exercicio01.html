@@ -12,15 +12,18 @@
         <h2>Atividade 01</h2>
 
         valor01: <input type="number" id="meuX" value="">
+        
         valor02: <input type="number" id="meuY" value="">
         <button onclick="minhaFuncao()">Somar</button>
         <p id="minhaResposta"></p>
         <script>
+            input.focus();
         function minhaFuncao() {
           var x = Number(document.getElementById("meuX").value);
           var y = Number(document.getElementById("meuY").value);
           var soma = x + y;
           document.getElementById("minhaResposta").innerHTML = soma;
+          
         }
         
         
