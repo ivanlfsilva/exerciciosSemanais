@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício_06</title>
+</head>
+<h1>Atividade 06</h1>
+<hr>
+<h2>Apresentando último número de uma cadeia de números</h2>
+<b>Digite um valor qualquer</b> <input type="number" id="recebendo">
+<button onclick="ultimoNumero()">ApresentaMenorValor</button>
+
+<body>
+    <script>
+        function ultimoNumero(){
+            
+            var num = Number(document.getElementById("recebendo").value);
+            var ultimo = num % 10
+            document.getElementById("exibi").innerHTML = "Este é o último número do valor digitado "
+             + ultimo
+        }
+
+    </script>
+    <p id="exibi"></p>
+</body>
+</html>
