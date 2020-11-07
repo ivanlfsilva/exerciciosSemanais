@@ -23,7 +23,7 @@
     <button onclick="calculaMedia()">calcular</button>
 </head>
 <body>
-    
+    <p id="resultado"></p>
     <script>
         
        
@@ -33,7 +33,7 @@
             var nota1 = Number(document.getElementById("nota01").value);
             var nota2 = Number(document.getElementById("nota02").value); 
             var mediaPonderada = ((nota1 * pesoNota1) + (nota2 * pesoNota2)) / (pesoNota1 + pesoNota2)
-            alert("Sua Média Ponderada È: " + mediaPonderada)
+            document.getElementById("resultado").innerHTML = ("Sua Média Ponderada é : " + mediaPonderada);
             
         }
 
