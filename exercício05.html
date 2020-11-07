@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício_05</title>
+    <style>
+        html{
+            background-color: rgba(15, 19, 248, 0.596);
+            text-align: center;
+            font-style: initial;
+        }
+        #exibi{
+            font-weight: bold;
+        }
+        
+    </style>
+    
+    
+    <h1>Atividade 05</h1>
+    <hr> 
+    <h2>Este Programa define a Área de um Ambiente</h2>
+    <br>
+    <b>Largura em metros: </b> <input type="number" id="largura">
+    <b>Profundidade em metros: </b> <input type="number" id="profundidade">
+    <button onclick="calculaArea()">Calcular</button>
+    
+    
+</head>
+<body>
+    <script>
+        function calculaArea(){
+            
+            var largura = Number(document.getElementById("largura").value);
+            var profundidade = Number(document.getElementById("profundidade").value);
+            var area = largura * profundidade
+            document.getElementById("exibi").innerHTML = "O ambiente possui largura de " + largura + 
+            " e  profundidade  de " + profundidade + ", totalizando " + area +
+            " metros quadrados";
+            console.log(area);
+
+        }
+
+    </script>
+    <p id="exibi"></p>
+</body>
+</html>
