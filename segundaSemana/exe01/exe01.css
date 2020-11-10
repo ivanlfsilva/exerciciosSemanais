@@ -1,3 +1,13 @@
+#borb{
+
+    
+}
+input{
+
+    background-color: rgba(212, 210, 93, 0.671);
+    border: tomato;
+    box-sizing: border-box;
+}
 body{
     
     color: mediumblue;
