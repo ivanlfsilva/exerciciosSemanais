@@ -1,0 +1,18 @@
+body{
+    
+    color: mediumblue;
+    font-style: sans-serif;
+    background-color: lightslategrey;
+    text-align: center;
+
+}
+button{
+
+    color: midnightblue;
+
+}
+#resultado{
+
+    font-weight: bold;
+
+}
