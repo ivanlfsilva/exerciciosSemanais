@@ -2,9 +2,29 @@
 <head>
     <meta charset="UTF-8" />
     <title>Programação Estruturada</title>
+    <style>
+        img{
+            border: 2px solid #000000 ;  
+            border-radius: 5px; 
+        }
+        body{
+            text-align: center;
+            background-color: lightblue;
+            color: rgb(2, 4, 14);
+        }
+        input{
+            background-color: lightblue;
+            border-color: rgb(0, 255, 234);
+        }
+    </style>
 </head>
-<body>
-    <h1>Entrada do Programa</h1>
+<body background="paisagem.jpg">
+    
+    <h1>Exercício aula 02</h1>
+    <h2>Caclculando Expressões</h2>
+        <img src="equação.jpg" alt="equação" id="imagem">
+        <br>
+        <br>
         <b>X :</b>  <input type="number" id="a" value=""><br />
         <br>
         <b>Y :</b>  <input type="number" id="b" value=""><br />
@@ -24,7 +44,7 @@
         // implemente a partir daqui
         var r = (((((x + y) / z) + w ) / z) + w) / (x + (y * y) -w) ; 
         // atribua o resultado dos seus algoritmos a r
-        document.getElementById('resultado').innerHTML = r;
+        document.getElementById('resultado').innerHTML = "O resultado da equação é :" + r;
     }
 </script>
 </body>
