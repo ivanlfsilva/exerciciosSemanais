@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média</title>
+    <style>
+        body{
+            background-color: rgb(35, 71, 5);
+            color: darkseagreen;
+            text-align: center;
+        }
+        input{ 
+            margin: 5px;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Calculando a Média ponderada</h1>
+    <hr>
+    <b>1ª Nota : </b>    <input type="number"  id="a"> <br />
+    <b>2ª Nota : </b>    <input type="number"  id="b"> <br />
+    <b>3ª Nota : </b>    <input type="number"  id="c"> <br />
+    <button onclick="executarExercicio()">Calcular</button>
+
+    <script>
+        function executarExercicio() { 
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);
+            //var d = Number(document.getElementById('d').value);
+            // implemente a partir daqui
+            var r = ((a*4)+(b*5)+(c*6)) / 15;
+            
+            
+            // atribua o resultado dos seus algoritmos a r 
+            document.getElementById('resultado').innerHTML = "A média ponderada (4, 5 e 6) entre os números " + a + ", "  +b+ " e " +c+  " é "  + r.toFixed(2);
+        }
+        
+    </script>
+    <p id="resultado"></p>
+   
+    
+</body>
+</html>
