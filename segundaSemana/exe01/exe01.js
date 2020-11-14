@@ -6,5 +6,7 @@ function executarExercicio() {
     //var d = Number(document.getElementById('d').value);
     // implemente a partir daqui
     var r = - a - (b + (c * a * b)) / (c * a); // atribua o resultado dos seus algoritmos a r
-    document.getElementById('resultado').innerHTML = "O resultado Da Expressão é : " + r.toFixed(2);
+    document.getElementById('resultado').innerHTML = "O resultado Da Expressão é : " + r;
     }
+
+    
