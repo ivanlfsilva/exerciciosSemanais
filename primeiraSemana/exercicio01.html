@@ -14,16 +14,20 @@
         valor01: <input type="number" id="meuX" value="">
         
         valor02: <input type="number" id="meuY" value="">
-        <button onclick="minhaFuncao()">Somar</button>
+        <button onclick="minhaFuncao('meuX','meuY','minhaResposta')">Somar</button>
         <p id="minhaResposta"></p>
         <script>
-            input.focus();
-        function minhaFuncao() {
-          var x = Number(document.getElementById("meuX").value);
-          var y = Number(document.getElementById("meuY").value);
-          var soma = x + y;
-          document.getElementById("minhaResposta").innerHTML = soma;
+            //input.focus();
+        function minhaFuncao(entrada1,entrada2,saida) {
+          var x = Number(document.getElementById(entrada1).value);
+          var y = Number(document.getElementById(entrada2).value);
+          var soma = media(x,y);
+          document.getElementById(saida).innerHTML = ` O resultado da soma de ${x} + ${y} é  ${soma}`;
           
+        }
+
+        function media(a,b){
+            return a+b;
         }
         
         
