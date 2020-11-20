@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Média</title>
+    <style>
+        body{
+            background-color: rgb(2, 86, 134);
+            color: darkseagreen;
+            text-align: center;
+        }
+        input{ 
+            margin: 5px;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+
+
 </head>
 <body>
-    
+    <h1>Calculando a Média</h1>
+    <hr>
+    <b>1ª Nota : </b>    <input type="number"  id="a"> <br />
+    <b>2ª Nota : </b>    <input type="number"  id="b"> <br />
+    <button onclick="executarExercicio()">Calcular</button>
+
+    <script>
+        function executarExercicio() { 
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            //var c = Number(document.getElementById('c').value);
+            //var d = Number(document.getElementById('d').value);
+            // implemente a partir daqui
+            var r = (a+b) / 2;
+            
+            
+            // atribua o resultado dos seus algoritmos a r 
+            document.getElementById('resultado').innerHTML = `A média entre os números  ${a} e ${b} é ` + r.toPrecision(4) ;
+        }
+        
+    </script>
+    <p id="resultado"></p>
+   
+    <a href="exercicioGeral.html" id="ancora">Voltar para página principal</a>
 </body>
 </html>
