@@ -2,13 +2,38 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Exercício 01</title>
+    <title>Imprimindo data e hora</title>
     <style>
 
     </style>
 </head>
 <body>
-    <script src="exercícioGeral.js">
+    <h1>Imprimi Hora e data</h1>
+    <!-- dia: <input type="number" id="a" value=""><br />
+    mês: <input type="number" id="b" value=""><br />
+    ano: <input type="number" id="c" value=""><br />
+    N4: <input type="number" id="d" value=""><br /> -->
+    <button onclick="mostraData()">Mostrar a Data e hora atuais</button>
+    <p id="resultado"></p>
+    
+    <script>
+     
+        function mostraData(){
+            
+            var data = new Date();
+            var dt = data.toString();
+            var minuto = dt.slice(19,21)
+            var hora = dt.slice(16,18)
+            var dia = dt.slice(8,10)
+            var mes = dt.slice(0,3);
+            var ano = dt.slice(11,15);
+            document.getElementById('resultado').innerHTML = (` Data: ${dia} de ${mes} de ${ano} <br>`) +
+            (` Hora: ${hora}h${minuto} <br>`);
+            
+        }
+
     </script>
+
+    <a href="exercicioGeral.html" id="voltar">voltar para página inicial</a> 
 </body>
 </html>
