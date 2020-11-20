@@ -2,15 +2,55 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Exerício 04</title>
+    <title>Média</title>
+    <style>
+        body{
+            background-color: dimgray;
+            color: darkseagreen;
+            text-align: center;
+        }
+        input{ 
+            margin: 5px;
+        }
+        button{
+            margin: 10px;
+        }
+    </style>
+
+
 </head>
 <body>
-    <h1></h1>
-    
-    
-    <script>
+    <h1>Calculando a Média ponderada</h1>
+    <hr>
+    <b>1ª Nota : </b>    <input type="number"  id="a"> <br />
+    <b>2ª Nota : </b>    <input type="number"  id="b"> <br />
+    <b>3ª Nota : </b>    <input type="number"  id="c"> <br />
+    <button onclick="executarExercicio('a','b','c')">Calcular</button>
 
+    <script>
+        function executarExercicio(enter1,enter2,enter3) { 
+            var a = Number(document.getElementById(enter1).value);
+            var b = Number(document.getElementById(enter2).value);
+            var c = Number(document.getElementById(enter3).value);
+            //var d = Number(document.getElementById('d').value);
+            // implemente a partir daqui
+            var media = mediaPonderada(a,b,c);
+            
+            
+            
+            // atribua o resultado dos seus algoritmos a r 
+            document.getElementById('resultado').innerHTML = `A média ponderada (4, 5 e 6) entre os números ${a} , ${b} e ${c} é ${media.toFixed(0)}`;
+        
+        }
+        function mediaPonderada(x,y,z){
+            
+            return ((x*4)+(y*5)+(z*6)) / 15;
+
+        }
+        
     </script>
+    <p id="resultado"></p>
+   
     <a href="exercicioGeral.html">Voltar para página principal</a>
 </body>
 </html>

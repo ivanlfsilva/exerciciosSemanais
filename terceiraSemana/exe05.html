@@ -9,6 +9,7 @@
 
         body{
 
+            background-color: dimgrey;
             text-align: center;
         }
         input{
@@ -21,11 +22,11 @@
 <body>
     <h1>Maior e Menor</h1>
     
-    Digite 1º Valor <input type="number"  id="a"  value="0"><br />
-    Digite 2º Valor <input type="number"  id="b"  value="0"><br />
-    Digite 3º Valor <input type="number"  id="c"  value="0"><br />
-    Digite 4º Valor <input type="number"  id="d"  value="0"><br />
-    <button onclick='soma()'>retornar o maior e o menor valor</button>
+    Digite 1º Valor <input type="number"  id="a"  value=""><br />
+    Digite 2º Valor <input type="number"  id="b"  value=""><br />
+    Digite 3º Valor <input type="number"  id="c"  value=""><br />
+    Digite 4º Valor <input type="number"  id="d"  value=""><br />
+    <button onclick='maiorMenor()'>retornar o maior e o menor valor</button>
     <p id="resultado"></p>
     
     <script>
@@ -33,17 +34,14 @@
             
             
         
-        function soma(){
+        function maiorMenor(){
             
             var x = Number(document.getElementById('a').value)
             var y = Number(document.getElementById('b').value)
             var w = Number(document.getElementById('c').value)
             var z = Number(document.getElementById('d').value)
             
-            //escreva(num1 + "<br>");
-            //escreva(num2 + "<br>");
-            //escreva(num3 + "<br>");
-            //escreva(num4 + "<br>");
+        
             
             var maior = Math.max(x,y,w,z);
             var menor = Math.min(x,y,w,z)
