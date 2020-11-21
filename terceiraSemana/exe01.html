@@ -24,13 +24,12 @@
      
         function mostraData(){
             
-            var data = new Date();
-            var dt = data.toString();
-            var minuto = dt.slice(19,21)
-            var hora = dt.slice(16,18)
-            var dia = dt.slice(8,10)
-            var mes = dt.slice(0,3);
-            var ano = dt.slice(11,15);
+            var data = new Date().toString();
+            var minuto = data.slice(19,21)
+            var hora = data.slice(16,18)
+            var dia = data.slice(8,10)
+            var mes = data.slice(0,3);
+            var ano = data.slice(11,15);
             document.getElementById('resultado').innerHTML = (` Data: ${dia} de ${mes} de ${ano} <br>`) +
             (` Hora: ${hora}h${minuto} <br>`);
             
