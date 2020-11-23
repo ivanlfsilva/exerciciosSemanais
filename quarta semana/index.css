@@ -1,0 +1,33 @@
+body{
+
+    background-color: rgb(104, 212, 248);
+
+}
+h1{
+    text-align: center
+}
+nav li{
+    
+    display: inline ;
+    margin-left: 15px;
+    
+}
+nav a{
+    text-decoration: none;
+}
+
+#lista desordenada{
+
+    text-decoration: none;
+
+}
+.lista{
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    list-style: none;
+    
+    
+
+}
