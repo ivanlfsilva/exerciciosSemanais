@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>encontrando divisores</h1>
+    <hr />
+    digite um número <input type="number" id="a" />
+    <button onclick="soma('a','resultado')">divisores</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      function soma(entrada1, saida) {
+        var x = Number(document.getElementById(entrada1).value);
+        //var y = Number(document.getElementById('b').value);
+        var a = 1;
+        var num = x;
+
+        for (a = 1; a <= x - 1; a++) {
+          if (num % a == 0) {
+            if (a == 1) {
+              document.write(`${a}`);
+            } else {
+              document.write(`,${a}`);
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

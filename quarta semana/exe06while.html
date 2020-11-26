@@ -6,8 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Contando do menor ao maior</h1>
-    Digite o valor de X <input type="number" id="a" /> Digite o valor de Y
+    <h1>apanhado do javascript</h1>
+    <input type="number" id="a" />
     <input type="number" id="b" />
     <button onclick="calcularSoma('a','b','resultado')">soma</button>
     <p id="resultado"></p>
@@ -15,14 +15,22 @@
       function calcularSoma(entrada1, entrada2, saida) {
         var a = Number(document.getElementById(entrada1).value);
         var b = Number(document.getElementById(entrada2).value);
-        var soma = 0;
-        var menor = Math.min(a, b);
-        var maior = Math.max(a, b);
-        while (menor <= maior) {
-          soma = soma + menor;
-          document.getElementById(saida).innerHTML = soma;
-          menor++;
+        var somaPares = 0;
+        var somaImpares = 0;
+        var r = 0;
+        while (a <= b) {
+          if (a % 2 == 0) {
+            somaPares += a;
+          } else if (a % 2 != 0) {
+            somaImpares += a;
+          }
+
+          a++;
         }
+
+        document.getElementById(
+          saida
+        ).innerHTML = `${somaPares}  <br>  ${somaImpares}`;
       }
     </script>
   </body>

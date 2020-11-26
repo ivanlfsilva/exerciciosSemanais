@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Soma dos pares e ímpares com while e for</h1>
+    <input type="number" id="a" />
+    <input type="number" id="b" />
+    <button onclick="calcularSoma('a','b','resultado')">
+      calcular com for
+    </button>
+    <button onclick="calcular('a','b','resultado')">calcular com while</button>
+    <p id="resultado"></p>
+    <script>
+      function calcularSoma(entrada1, entrada2, saida) {
+        var a = Number(document.getElementById(entrada1).value);
+        var b = Number(document.getElementById(entrada2).value);
+        var somaPares = 0;
+        var somaImpares = 0;
+        var r = 0;
+        var menor = Math.min(a, b);
+        var maior = Math.max(a, b);
+        for (r = menor; r <= maior; r++) {
+          if (r % 2 == 0) {
+            somaPares += r;
+          } else if (r % 2 != 0) {
+            somaImpares += r;
+          }
+        }
+        document.getElementById(
+          saida
+        ).innerHTML = `${somaPares}  <br>  ${somaImpares}`;
+      }
+      function calcular(entrada1, entrada2, saida) {
+        var a = Number(document.getElementById(entrada1).value);
+        var b = Number(document.getElementById(entrada2).value);
+        var somaPares = 0;
+        var somaImpares = 0;
+        var r = 0;
+        var menor = Math.min(a, b);
+        var maior = Math.max(a, b);
+        while (menor <= maior) {
+          if (menor % 2 == 0) {
+            somaPares += menor;
+          } else if (menor % 2 != 0) {
+            somaImpares += menor;
+          }
+
+          menor++;
+        }
+        document.getElementById(
+          saida
+        ).innerHTML = `${somaPares}  <br>  ${somaImpares}`;
+      }
+    </script>
+  </body>
+</html>

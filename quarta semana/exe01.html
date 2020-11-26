@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Positivo, Negativo e Zero</title>
+    <style>
+      #resultado {
+        font-size: 50px;
+        color: linear-gradient(to top, rgb(182, 158, 158), rgb(211, 211, 34));
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>positivo, negativo ou zero</h1>
+    <b>Digite um número</b> <input type="number" id="a" value="" />
+    <!-- N2: <input type="number" id="b" value=""><br /> -->
+    <button onclick="executarExercicio('a','resultado')">
+      Exibir resultado
+    </button>
+    <p id="resultado"></p>
+    <script>
+      function executarExercicio(entrada, saida) {
+        var a = Number(document.getElementById(entrada).value);
+
+        if (Math.sign(a) == 1) {
+          document.getElementById(saida).innerHTML = "positivo";
+        } else if (Math.sign(a) == -1) {
+          document.getElementById(saida).innerHTML = "negativo";
+        } else {
+          document.getElementById(saida).innerHTML = "O valor é zero";
+        }
+      }
+    </script>
+  </body>
 </html>

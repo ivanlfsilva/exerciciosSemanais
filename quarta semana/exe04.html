@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>sequência de soma com <code>do while</code></h1>
+    <b>primeiro número</b> <input type="number" id="a" /> <b>segundo número</b
+    ><input type="number" id="b" />
+    <button onclick="calcularSoma('a','b','resultado')">somar</button>
+    <p id="resultado"></p>
+    <script>
+      function calcularSoma(entrada1, entrada2, saida) {
+        var a = Number(document.getElementById(entrada1).value);
+        var b = Number(document.getElementById(entrada2).value);
+        var soma = 0;
+        var menor = Math.min(a, b);
+        var maior = Math.max(a, b);
+        do {
+          soma = soma + menor;
+          document.getElementById(
+            saida
+          ).innerHTML = ` o resultado da soma sucessiva de ${a} até ${b} é ${soma}`;
+          menor++;
+        } while (menor <= maior);
+      }
+    </script>
+  </body>
+</html>

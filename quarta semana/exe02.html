@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 02</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Somando Números de x à y</h1>
+    Digite o valor de X <input type="number" id="a" /><br />
+    Digite o valor de Y <input type="number" id="b" /><br />
+    <button onclick="calcularSoma('a','b','resultado')">Somar</button>
+    <p id="resultado"></p>
+    <script>
+      function calcularSoma(entrada1, entrada2, saida) {
+        var a = Number(document.getElementById(entrada1).value);
+        var b = Number(document.getElementById(entrada2).value);
+        var soma = 0;
+        var menor = Math.min(a, b);
+        var maior = Math.max(a, b);
+        var r = 0;
+        for (r = menor; r <= maior; r++) {
+          soma = soma + r;
+          document.getElementById(saida).innerHTML = soma;
+        }
+      }
+    </script>
+  </body>
+</html>
