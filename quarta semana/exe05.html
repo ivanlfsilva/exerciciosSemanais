@@ -22,16 +22,16 @@
       function soma(entrada1, saida) {
         var x = Number(document.getElementById(entrada1).value);
         //var y = Number(document.getElementById('b').value);
-        var a = 1;
+        var a = 0;
         var num = x;
-
-        for (a = 1; a <= x - 1; a++) {
+        var seleção = []
+        var aux =-1;
+        
+        for (a = 1; a <= x-1; a++) {
           if (num % a == 0) {
-            if (a == 1) {
-              document.writeln(`${a} `);
-            } else {
-              document.writeln(` ,${a}`);
-            }
+              aux++;
+              seleção[aux] = a;
+              document.getElementById(saida).innerHTML =`esses são os divisores ${seleção}`
           }
         }
       }
