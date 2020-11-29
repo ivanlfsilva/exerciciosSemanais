@@ -31,20 +31,20 @@
         //var y = Number(document.getElementById('b').value);
         var a = 0;
         var num = x;
-        var seleção = "";
-        var aux =-1;
+        var divi;
         
+        document.write('divisores: ')
         for (a = 1; a <= x-1; a++) {
-          if (num % a == 0) {
-            if(a === 1){
-              seleção = seleção + `${a}`;
-            }else{
-              seleção = seleção + `,${a}`
-            }
-              var texto = `${seleção}`;
+         
+          if(num % a == 0) {
+            
+                divi = a;
+            
+                document.write(`   ${divi}`)
               
-              document.getElementById(saida).innerHTML =` divisores = ${texto}`
-          }
+            
+          
+            }
         }
       }
     </script>
