@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Ordenção de vetores(arrays)</h1>
+    <hr>
+    <h6>esse programa recebe dez valores depois mostra a saída conforme foram digitados e depois de forma ordenada</h6>
+    <button onclick="ordenaArray()">iniciar programa</button>
+    <p id="saida"></p>
+    <script>
+        function ordenaArray(){
+            var i;
+            var vetor = [];
+            var s = " ";
+            var v = " ";
+            for(i=0;i<10;i++){
+
+                var num = prompt(`digite ${i+1}º valor`);
+                vetor[i] = num;
+                s = `${s} ` + vetor[i]
+                v = vetor.sort(function(a,b){return a-b});
+            
+
+            }
+            document.getElementById("saida").innerHTML =`conforme digitados${s} <br>` +
+             ` de forma crescente ${v.join(" ")} ` 
+        }
+
+    </script>
+</body>
+</html>
