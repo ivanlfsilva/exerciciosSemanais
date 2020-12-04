@@ -1,62 +1,75 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Programação Estruturada</title>
 </head>
+
 <body>
-     <script>
-        function chamaFuncao(){
-  var numeros = [];
-  var vetor = -1;
-  var j = 0;
-  var i = 0;
+  <h3>Ocorrência:</h3>
+  <script>
+      var vetor = []
+      var naoRepetido = []
+      var valor = []
+      var indice = []
+      var quantNumeros = 0
+      var quantNaoRepetidos = 0
+      var quantRepetidos = 0
+      var ocorrencia = 0
+      var aux = 0
 
-  while (vetor != 0) {
-    var vetor = Number(prompt("digite um número"));
-    if (vetor != 0) {
+      while (digitos!=0){var digitos = prompt("Digite os números: ")
+      //Até que aperte o zero
+          if (digitos !=0){
+              vetor[quantNumeros]= digitos
+              quantNumeros++
+          }
+        }
 
-      numeros[j] = vetor;
-
-      j++;
-    }
-    var maiorInd = numeros.indexOf(max);
-    var menorInd = numeros.indexOf(min);
-    var maxmin = maximo_minimo(numeros);
-    var min = maxmin[0];
-    var max = maxmin[1];
-
-
-
-    resposta = `O Menor elemento é ${min} índice ${menorInd} <br>`
-    resposta = resposta + `O Maior Elemento é ${max} índice ${maiorInd} <br>` +
-      `${max} - ${min} = ${max - min} <br>` +
-      `${max} + ${min} = ${max + min} <br>` +
-      `${max} * ${min} = ${max * min} <br>` +
-      `${max} / ${min} = ${max / min}`;
-
-    document.getElementById("resultado").innerHTML = resposta;
-
-  }
-
-  // Esta função faz com que precisemos percorrer o array apenas uma vez
-  function maximo_minimo(arr) {
-    var min = Infinity;               // O maior valor possível
-    var max = -Infinity;              // O menor valor possível
-    for (i = 0; i < arr.length; i++) {
-      if (arr[i] > max) {
-        max = arr[i];
+      for(i=0;i<quantNumeros-1;i++){
+          var naoAchou = true;
+          var indices = 0;
+          while(naoAchou && indices<=quantNaoRepetidos){
+              if(vetor[i]== naoRepetido[indices]){
+                  naoAchou = false
+              } else {
+                  indices = indices +1
+              }
+          }
+          if(naoAchou){
+              naoRepetido[indices]=vetor[i]
+              quantNaoRepetidos = quantNaoRepetidos + 1
+          }
       }
-      if (arr[i] < min) {
-        min = arr[i];
+
+      //Ocorrências
+      for(j=0;j<=quantNaoRepetidos;j++){
+            var quantOcorre = 0;
+          
+          for(i=0;i<quantNumeros-1;i++){
+              if(vetor[i]==naoRepetido[j]){
+                  quantOcorre = quantOcorre + 1
+              }
+              
+          }
+          
+          if (quantOcorre>=ocorrencia){
+              ocorrencia = quantOcorre
+              valor = naoRepetido[j]
+              
+          }
+          
       }
-    }
-    return [min, max];
-  }
-
-}
-
-    </script>
-    
+      
+      
+      //indices
+      for(k=0;k<quantNumeros;k++){
+          if(valor==vetor[k]){
+              indice[aux] = k 
+              aux++
+          }
+      }
+      document.write(`O número de maior ocorrência é: ${valor}  <br> ` + 
+      `Ele encontra-se nos índices: ${indice.join("-")}`)
+  </script>
 </body>
+
 </html>
