@@ -5,7 +5,7 @@ function chamaFuncao() {
   var i = 0;
 
   while (vetor != 0) {
-    var vetor = Number(prompt("digite um número"));
+    var vetor = Number(prompt("digite um número qualquer, e para exibir o resultado do programa digite 0 a qualquer momento"));
     if (vetor != 0) {
 
       numeros[j] = vetor;

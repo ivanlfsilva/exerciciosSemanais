@@ -13,16 +13,16 @@
         var num = 0;
         var matriz = [];
         // criando matriz vazia
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 10; i++) {
             matriz[i] = [];
-            for (var j = 0; j < 3; j++) {
+            for (var j = 0; j < 5; j++) {
                 matriz[i][j] = " ";
             }
 
         }
 
-        for (var linhas = 0; linhas < 3; linhas++) {
-            for (var colunas = 0; colunas < 3; colunas++) {
+        for (var linhas = 0; linhas < 10; linhas++) {
+            for (var colunas = 0; colunas < 5; colunas++) {
 
                 matriz[linhas][colunas] = Number(prompt(`Digite  o valor [${linhas + 1}][${colunas + 1}] para matriz`));
 
@@ -31,11 +31,11 @@
         }
 
         var elementos = " ";
-        for (var linhas = 0; linhas < 3; linhas++) {
-            for (var colunasMatriz = 0; colunasMatriz < 3; colunasMatriz++) {
-                if (colunasMatriz < 3 - 1) {
+        for (var linhas = 0; linhas < 10; linhas++) {
+            for (var colunasMatriz = 0; colunasMatriz < 5; colunasMatriz++) {
+                if (colunasMatriz < 5 - 1) {
 
-                    elementos += matriz[linhas][colunasMatriz] + `\t\t`
+                    elementos += matriz[linhas][colunasMatriz] + `\t\t\t\t`
                 } else {
 
                     elementos += matriz[linhas][colunasMatriz] + `<br>`
@@ -50,7 +50,7 @@
 
                 var soma = 0;
                 var colunaDesejada = Number(prompt(`a matriz tem ${colunas} colunas digite Qual coluna vc deseja somar `));
-            for (var linhas = 0; linhas < 3; linhas++) {
+            for (var linhas = 0; linhas < 10; linhas++) {
                 for (var colunasMatriz = 0; colunasMatriz < colunaDesejada - 1; colunasMatriz++) {
 
 
@@ -61,7 +61,7 @@
             }
                 document.write(`${elementos} <br>`);
                 document.write(`O resultado da soma Da coluna ${colunaDesejada} é : ${soma}`)
-
+                //haja saco pra testar professor, kkkkk poderiam pedir com números menores
 
     </script>
 

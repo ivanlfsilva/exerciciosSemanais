@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  <h3>Ocorrência:</h3>
+  <h3>descobrindo maior ocorrência</h3>
   <script>
       var vetor = []
       var naoRepetido = []
@@ -16,7 +16,8 @@
       var ocorrencia = 0
       var aux = 0
 
-      while (digitos!=0){var digitos = prompt("Digite os números: ")
+      while (digitos!=0){var digitos = prompt("Digite uma sequência númerica repetida ou não," +
+        " para sair digite 0");
       //Até que aperte o zero
           if (digitos !=0){
               vetor[quantNumeros]= digitos
@@ -61,14 +62,15 @@
       
       
       //indices
+      document.write(`O número de maior ocorrência é: ${valor} <br>` + `foi recebido ${ocorrencia+1} vezes <br>`);
+      document.write("ele se encontra nos indices :  <br>");
       for(k=0;k<quantNumeros;k++){
           if(valor==vetor[k]){
-              indice[aux] = k 
-              aux++
+              document.write(k + "<br>") 
+              
           }
       }
-      document.write(`O número de maior ocorrência é: ${valor}  <br> ` + 
-      `Ele encontra-se nos índices: ${indice.join("-")}`)
+      
   </script>
 </body>
 
