@@ -21,8 +21,8 @@
 
         }
 
-        for (var linhas = 0; linhas < 10; linhas++) {
-            for (var colunas = 0; colunas < 5; colunas++) {
+        for (var linhas = 0; linhas < 2; linhas++) {
+            for (var colunas = 0; colunas < 2; colunas++) {
 
                 matriz[linhas][colunas] = Number(prompt(`Digite  o valor [${linhas + 1}][${colunas + 1}] para matriz`));
 
@@ -31,11 +31,11 @@
         }
 
         var elementos = " ";
-        for (var linhas = 0; linhas < 10; linhas++) {
-            for (var colunasMatriz = 0; colunasMatriz < 5; colunasMatriz++) {
-                if (colunasMatriz < 5 - 1) {
+        for (var linhas = 0; linhas < 2; linhas++) {
+            for (var colunasMatriz = 0; colunasMatriz < 2; colunasMatriz++) {
+                if (colunasMatriz < 2 - 1) {
 
-                    elementos += matriz[linhas][colunasMatriz] + `\t\t\t\t`
+                    elementos += matriz[linhas][colunasMatriz] + ` | `
                 } else {
 
                     elementos += matriz[linhas][colunasMatriz] + `<br>`
@@ -50,13 +50,13 @@
 
                 var soma = 0;
                 var colunaDesejada = Number(prompt(`a matriz tem ${colunas} colunas digite Qual coluna vc deseja somar `));
-            for (var linhas = 0; linhas < 10; linhas++) {
+            for (var linhas = 0; linhas < 2; linhas++) {
                 for (var colunasMatriz = 0; colunasMatriz < colunaDesejada - 1; colunasMatriz++) {
 
 
                 }
 
-                soma = soma + matriz[linhas][colunasMatriz]
+                soma += matriz[linhas][colunasMatriz]
 
             }
                 document.write(`${elementos} <br>`);

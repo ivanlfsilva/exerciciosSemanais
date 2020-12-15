@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    <button onclick='executarExercicio()'>iniciar programa</button>
+    <p id="resultado"></p>
+    <script>
+        var a = -1;
+        var vetor = [];
+        var i = 0;
+        var texto = " ";
+        //executarExercicio();/
+        function executarExercicio() {
+
+            if (a !== 0) {
+
+                i++;
+                a = Number(prompt("Digite um número para preencher o vetor, para sair digite 0"));
+                if (a != 0) {
+                    texto = "";
+                    vetor[i] = a
+                    texto += vetor.join(' ')
+
+                    return executarExercicio();
+                }
+                document.getElementById("resultado").innerHTML = texto;
+
+            }
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

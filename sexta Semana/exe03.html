@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+
+
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    <h3>este programa recebe valores aleatórios e preenche uma matriz 5x5, após o recebimento dos valores
+        ele os imprime na tela
+    </h3>
+    <button onclick="executarExercicio()""> click aqui iniciar</button>
+    <p id="resultado" style="font-size: 25px; text-align: center;"></p>
+    <script>
+        var matriz = [[], [], [], [], []];
+        var i = 0;
+        var j = 0;
+        var inicio = 0;
+
+        function executarExercicio() {
+
+            let i = 0;
+            let j = 0;
+            preenchendoMatriz();
+            exibindoMatriz();
+
+        }
+        // essa parte do código chama a matriz e faz o preenchimento dos elementos de forma recursiva
+        //preenchendoMatriz();
+        function preenchendoMatriz() {
+            if (inicio < 25) {
+
+                matriz[i][j] = Number(prompt(`Digite o valor ${i+1},${j+1}`));
+                if (j == 4) {
+                    j = -1;
+                    i++;
+                }
+                j++;
+                inicio++;
+                return preenchendoMatriz();
+            }
+            else {
+                i = 0;
+                j = 0;
+                inicio = 0;
+
+                return matriz;
+            }
+        }
+
+        // essa função organiza a matriz para ser exibida 
+
+        var texto = "";
+        function exibindoMatriz() {
+
+            if (inicio < 25) {
+                if (j == 4) {
+                    texto += matriz[i][j];
+                } else {
+                    texto += matriz[i][j] + "|";
+                }
+
+                if (j == 4) {
+                    j = -1;
+                    i++;
+                    texto += "<br>"
+                }
+                j++;
+                inicio++;
+
+                return exibindoMatriz();
+            }
+            else {
+
+                document.getElementById("resultado").innerHTML = texto;
+                return texto;
+            }
+        }
+    </script>
+</body>
+
+</html>

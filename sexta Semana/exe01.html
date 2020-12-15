@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    <button onclick='preenchendovetor()'>iniciar programa</button>
+    <p id="resultado"></p>
+    <script>
+        var a = 0;
+        var vetor = [];
+        var i = 0;
+        var texto = " ";
+
+        function preenchendovetor() {
+
+            if (a < 1) {
+                a = Number(prompt('Digite a quantidade de Números que terá seu vetor'));
+                if (a < 1) {
+                    alert("digite um valor maior que zero");
+                    return preenchendovetor();
+                } else {
+                    return preenchendovetor();
+                }
+            }
+            if (i < a) {
+
+
+                i++;
+                texto = "";
+                vetor[i] = Number(prompt("Digite o " + i + "º Número"));
+                texto += vetor.join("   ");
+
+                return preenchendovetor();
+
+
+            }
+
+            document.getElementById("resultado").innerHTML = texto;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
