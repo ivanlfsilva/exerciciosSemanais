@@ -1,49 +1,63 @@
-function chamaFuncao() {
-  var numeros = [];
-  var vetor = -1;
-  var j = 0;
-  var i = 0;
+//O objetivo desse código é capturar os números digitados pelo usuário, armazenar esses números em um array e no final, quanto o usuário digitar "0" o programa deve retornar: Quais numeros foram digitados?Qual deles é o maior e o menor?Qual o resultado das operações matemáticas entre esses dois números?
 
-  while (vetor != 0) {
-    var vetor = Number(prompt("digite um número qualquer, e para exibir o resultado do programa digite 0 a qualquer momento"));
-    if (vetor != 0) {
+//Essa é a função principal que está sendo chamada pelo HTML.Ela inicialmente declara o array que armazenará os números digitados pelo usuário, uma variavel responsável por armazenar cada número e tambem declara um contador usado para estabelecer a condição de parada(o usuário digitar 0) do armazenamento das informações, ou seja enquanto os valores digitados não foram zero, o programa armazenara o numero digitado no array.
+try{
 
-      numeros[j] = vetor;
+function executarExercicio() {
+  var listaNumero = [];
+  var i = 1;
+  var a;
+  var r = listaNumero;
+  
+  while (i !== 0) {
+    a = Number(prompt("Informe um número:"));
 
-      j++;
-    }
-    var maiorInd = numeros.indexOf(max);
-    var menorInd = numeros.indexOf(min);
-    var maxmin = maximo_minimo(numeros);
-    var min = maxmin[0];
-    var max = maxmin[1];
+    if (a === 0) {
+      break; 
+    } 
 
-
-
-    resposta = `O Menor elemento é ${min} índice ${menorInd} <br>`
-    resposta = resposta + `O Maior Elemento é ${max} índice ${maiorInd} <br>` +
-      `${max} - ${min} = ${max - min} <br>` +
-      `${max} + ${min} = ${max + min} <br>` +
-      `${max} * ${min} = ${max * min} <br>` +
-      `${max} / ${min} = ${max / min}`;
-
-    document.getElementById("resultado").innerHTML = resposta;
-
+  listaNumero.push(a);
   }
 
-  // Esta função faz com que precisemos percorrer o array apenas uma vez
-  function maximo_minimo(arr) {
-    var min = Infinity;               // O maior valor possível
-    var max = -Infinity;              // O menor valor possível
-    for (i = 0; i < arr.length; i++) {
-      if (arr[i] > max) {
-        max = arr[i];
-      }
-      if (arr[i] < min) {
-        min = arr[i];
-      }
+  var maiorNum = maximo(r);
+  var menorNum = minimo(r);
+  var indeceMaiorNum = listaNumero.indexOf(maiorNum);
+  var indiceMenorNum = listaNumero.indexOf(menorNum); 
+   
+    
+  document.getElementById('resultado').innerHTML = `Os números digitados foram ${r}`;
+  document.getElementById('maior').innerHTML = `O maior número entre eles é ${maiorNum} e o seu índice ${indeceMaiorNum}`;
+  document.getElementById('menor').innerHTML = `O menor número entre eles é ${menorNum} e o seu índice ${indiceMenorNum}`;
+  document.getElementById('subtracao').innerHTML = `A subtração entre ${maiorNum} - ${menorNum} = ${maiorNum - menorNum}`;
+  document.getElementById('soma').innerHTML = `A soma entre ${maiorNum} + ${menorNum} = ${maiorNum + menorNum}`;
+  document.getElementById('mult').innerHTML = `A multiplicação entre ${maiorNum} * ${menorNum} = ${maiorNum * menorNum}`;
+  document.getElementById('divisao').innerHTML = `A divisão entre ${maiorNum} / ${menorNum} = ${maiorNum / menorNum}`;
+
+}
+
+//Essa função percorrerá o array e identificará o menor valor valor presente nele.               
+function minimo(arr) {
+  var min = Infinity;   
+
+  for (i = 0; i < arr.length; i++) {
+
+    if (arr[i] < min) {
+      min = arr[i];
     }
-    return [min, max];
   }
 
+  return min;
+}
+//Assim como a função anterior essa irá comparar os valores entre eles e então retornará o maior valor encontrado dentro do array.
+function maximo(arr) {
+  var max = -Infinity;   
+
+  for (i = 0; i < arr.length; i++) {
+
+   if (arr[i] > max) {
+      max = arr[i];
+    }
+  }  
+              
+  return max;
 }

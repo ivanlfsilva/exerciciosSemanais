@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+
+            var a = 1;
+            var b = 0;
+            var num = [];
+            var i = 0;
+
+            while (a != 0){
+                var a = Number(prompt('informe um número:'));
+                num[i] = a;
+                i++;
+            }
+            
+            var frequencia = 0;
+            var ocorreu = 0;
+            var ocorreMais = 0;
+            var indice = [];
+
+            for (var x=0;x<i-1;x++){
+            for (var z=0;z<i-1;z++){
+                if (num[x] == num[z]){
+                    ocorreu = ocorreu + 1;
+                }
+
+                if (ocorreu > ocorreMais) {
+                    frequencia = num[x];
+                    ocorreMais = ocorreu;
+                }                
+            }
+            ocorreu = 0;
+            }
+
+            for (var w = 0;w<i;w++){
+                if (num[w] == frequencia){
+                    indice[b] = w
+                    b++
+                }
+            }
+
+            indice = indice.join('<br />')
+
+            document.getElementById('resultado').innerHTML = `o número que mais apareceu foi: ${frequencia}<br>Nos índices: <br/>${indice}`;
+            }
+ </script>
+</body>
+</html>

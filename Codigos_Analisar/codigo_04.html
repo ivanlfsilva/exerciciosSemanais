@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exercício For</title>
+    </head>
+    <body>
+        <h1>Somatórios de x a y - Pares e Ímpares (For)</h1>
+        N1: <input type="number" id="a" value=""><br />
+        N2: <input type="number" id="b" value=""><br />
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            
+            var somatorioPar = 0;
+            var somatorioImpar = 0;
+
+            if (a > b) {
+                var r = a;
+                a = b;
+                b = r;
+            }
+
+            for (i = a; i <= b; i++) {
+                if (i % 2 == 0) {
+                    somatorioPar += i;
+                } else {
+                    somatorioImpar += i;
+                }
+            }
+
+            r = "Soma dos números pares: " + somatorioPar + " Somatório Ímpar: " + somatorioImpar;
+            document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>
