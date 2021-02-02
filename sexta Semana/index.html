@@ -55,7 +55,7 @@
                     return min;
                 }
                 //Assim como a função anterior essa irá comparar os valores entre eles e então retornará o maior valor encontrado dentro do array.
-                function maimo(arr) {
+                function maximo(arr) {
                     var max = -Infinity;
 
                     for (i = 0; i < arr.length; i++) {
@@ -82,7 +82,7 @@
                 document.getElementById('mult').innerHTML = `A multiplicação entre ${maiorNum} * ${menorNum} = ${maiorNum * menorNum}`;
                 document.getElementById('divisao').innerHTML = `A divisão entre ${maiorNum} / ${menorNum} = ${maiorNum / menorNum}`;
             } catch { 
-                document.getElementById("maior").innerHTML = Error; 
+                document.getElementById("maior").innerHTML = "encontrei um erro"; 
             }
         }
 
